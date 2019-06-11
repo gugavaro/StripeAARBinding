@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{3E237F0B-723E-41DB-9A78-AE4809B50A21}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="StripeAARBinding/Transforms/Metadata.xml">
+    <Files>
+      <File FileName="StripeAARBinding/Transforms/Metadata.xml" Line="15" Column="1" />
+      <File FileName="TestStripeBinding/MainActivity.cs" Line="50" Column="24" />
+      <File FileName="TestStripeBinding/CallbackClasses/Callback.cs" Line="12" Column="7" />
+      <File FileName="TestStripeBinding/CallbackClasses/PaymentIntentCallback.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Option id="ShowAllFiles" value="True" />
+          <Node name="StripeAARBinding" expanded="True">
+            <Node name="StripeAARBinding" expanded="True">
+              <Node name="bin" expanded="True" selected="True" />
+              <Node name="obj" expanded="True" />
+              <Node name="Transforms" expanded="True" />
+            </Node>
+            <Node name="TestStripeBinding" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.StripeAARBinding PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
