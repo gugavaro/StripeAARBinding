@@ -1,4 +1,4 @@
-﻿<metadata>
+<metadata>
   <!--
   This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
@@ -7,8 +7,190 @@
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" /> 
     -->
     
-    <attr path="/api/package[@name='com.stripe.stripeterminal']/interface[@name='ErrorCallback']" name="visibility">public</attr>
-    <remove-node path="/api/package[@name='com.stripe.stripeterminal']/class[@name='DaggerTerminalComponent']" />
-    <attr path="/api/package[@name='com.stripe.stripeterminal']/class[@name='Terminal']/method[@name='setTerminalListener']" name="eventName">TerminalListener</attr>
+    <add-node path="//interface[@jni-signature='Lcom/stripe/stripeterminal/Callback;']">
+      <method
+        abstract="true"
+        deprecated="not deprecated"
+        final="false"
+        name="onFailure"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Lcom/stripe/stripeterminal/TerminalException;)V">
+        <parameter
+          name="p0"
+          type="com.stripe.stripeterminal.TerminalException"
+          jni-type="Lcom/stripe/stripeterminal/TerminalException;" />
+      </method>
+    </add-node>
+    <remove-node path="//interface[@jni-signature='Lcom/stripe/stripeterminal/Callback;']/implements[@name='com.stripe.stripeterminal.ErrorCallback']" />
 
+    <add-node path="//interface[@jni-signature='Lcom/stripe/stripeterminal/PaymentIntentCallback;']">
+      <method
+        abstract="true"
+        deprecated="not deprecated"
+        final="false"
+        name="onFailure"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Lcom/stripe/stripeterminal/TerminalException;)V">
+        <parameter
+          name="p0"
+          type="com.stripe.stripeterminal.TerminalException"
+          jni-type="Lcom/stripe/stripeterminal/TerminalException;" />
+      </method>
+    </add-node>
+    <remove-node path="//interface[@jni-signature='Lcom/stripe/stripeterminal/PaymentIntentCallback;']/implements[@name='com.stripe.stripeterminal.ErrorCallback']" />
+
+    <add-node path="//interface[@jni-signature='Lcom/stripe/stripeterminal/PaymentMethodCallback;']">
+      <method
+        abstract="true"
+        deprecated="not deprecated"
+        final="false"
+        name="onFailure"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Lcom/stripe/stripeterminal/TerminalException;)V">
+        <parameter
+          name="p0"
+          type="com.stripe.stripeterminal.TerminalException"
+          jni-type="Lcom/stripe/stripeterminal/TerminalException;" />
+      </method>
+    </add-node>
+    <remove-node path="//interface[@jni-signature='Lcom/stripe/stripeterminal/PaymentMethodCallback;']/implements[@name='com.stripe.stripeterminal.ErrorCallback']" />
+
+    <add-node path="//interface[@jni-signature='Lcom/stripe/stripeterminal/ReaderCallback;']">
+      <method
+        abstract="true"
+        deprecated="not deprecated"
+        final="false"
+        name="onFailure"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Lcom/stripe/stripeterminal/TerminalException;)V">
+        <parameter
+          name="p0"
+          type="com.stripe.stripeterminal.TerminalException"
+          jni-type="Lcom/stripe/stripeterminal/TerminalException;" />
+      </method>
+    </add-node>
+    <remove-node path="//interface[@jni-signature='Lcom/stripe/stripeterminal/ReaderCallback;']/implements[@name='com.stripe.stripeterminal.ErrorCallback']" />
+
+    <add-node path="//interface[@jni-signature='Lcom/stripe/stripeterminal/ReaderSoftwareUpdateCallback;']">
+      <method
+        abstract="true"
+        deprecated="not deprecated"
+        final="false"
+        name="onFailure"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Lcom/stripe/stripeterminal/TerminalException;)V">
+        <parameter
+          name="p0"
+          type="com.stripe.stripeterminal.TerminalException"
+          jni-type="Lcom/stripe/stripeterminal/TerminalException;" />
+      </method>
+    </add-node>
+    <remove-node path="//interface[@jni-signature='Lcom/stripe/stripeterminal/ReaderSoftwareUpdateCallback;']/implements[@name='com.stripe.stripeterminal.ErrorCallback']" />
+
+    <!-- TerminalComponent -->
+    <add-node path="//class[@jni-signature='Lcom/stripe/stripeterminal/DaggerTerminalComponent;']">
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getEventFactory"
+        native="false"
+        return="com.stripe.stripeterminal.EventFactory"
+        jni-return="Lcom/stripe/stripeterminal/EventFactory;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Lcom/stripe/stripeterminal/EventFactory;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getTerminal"
+        native="false"
+        return="com.stripe.stripeterminal.Terminal"
+        jni-return="Lcom/stripe/stripeterminal/Terminal;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Lcom/stripe/stripeterminal/Terminal;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getTraceFactory"
+        native="false"
+        return="com.stripe.stripeterminal.TraceFactory"
+        jni-return="Lcom/stripe/stripeterminal/TraceFactory;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Lcom/stripe/stripeterminal/TraceFactory;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="getTraceFlusher"
+        native="false"
+        return="com.stripe.stripeterminal.LogFlusher"
+        jni-return="Lcom/stripe/stripeterminal/LogFlusher;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Lcom/stripe/stripeterminal/LogFlusher;" />
+    </add-node>
+    <remove-node path="//class[@jni-signature='Lcom/stripe/stripeterminal/DaggerTerminalComponent;']/implements[@name='com.stripe.stripeterminal.TerminalComponent']" />
+
+    <!-- EventFactory isn't public either! -->
+    <attr path="/api/package[@name='com.stripe.stripeterminal']/class[@name='DaggerTerminalComponent']/method[@name='getEventFactory' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.stripe.stripeterminal']/class[@name='DaggerTerminalComponent']/method[@name='getTraceFactory' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.stripe.stripeterminal']/class[@name='DaggerTerminalComponent']/method[@name='getTraceFlusher' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
+
+    <!-- ... -->
+    <attr path="/api/package[@name='com.stripe.stripeterminal']/class[@name='DaggerTerminalComponent.Builder']/method[@name='build' and count(parameter)=0]" name="managedReturn">Com.Stripe.Stripeterminal.DaggerTerminalComponent</attr>
+    
+    
+    <attr path="/api/package[@name='com.stripe.stripeterminal']/class[@name='Terminal']/method[@name='setTerminalListener']" name="eventName">TerminalListener</attr>
 </metadata>
